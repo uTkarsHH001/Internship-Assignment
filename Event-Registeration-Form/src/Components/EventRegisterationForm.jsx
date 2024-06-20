@@ -25,7 +25,9 @@ export default function EventRegistrationForm() {
     if(formData.age <= 0) {
       alert('Age must be a number greater than 0')
     }
-    setSubmitted(true)  
+    else{
+      setSubmitted(true)
+    }  
   }
 
   if (submitted) {
