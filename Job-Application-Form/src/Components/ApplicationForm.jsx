@@ -54,7 +54,7 @@ export default function ApplicationForm() {
     if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Valid Email is required';
     if (!formData.phoneNumber || isNaN(formData.phoneNumber)) newErrors.phoneNumber = 'Valid Phone Number is required';
     if (!formData.position) newErrors.position = 'Please choose a position';
-    if (formData.position === ('developer' || 'designer')){ if(!formData.experience || formData.experience <= 0){newErrors.experience = 'Relevant Experience is required and must be greater than 0'}}
+    if (formData.position === 'developer' || formData.position === 'designer'){ if(!formData.experience || formData.experience <= 0){newErrors.experience = 'Relevant Experience is required and must be greater than 0'}}
     if (formData.position === 'designer' && (!formData.portfolio || !/^https?:\/\/.*\..*/.test(formData.portfolio))) newErrors.portfolio = 'Valid Portfolio URL is required'
     if ((formData.position === 'manager' && (!formData.managementExperience || formData.managementExperience <= 0))) newErrors.managementExperience = 'Management Experience is required and must be greater than 0'
     if (formData.additionalSkills.length === 0) newErrors.additionalSkills = 'At least one skill must be selected';
@@ -109,7 +109,7 @@ export default function ApplicationForm() {
         />
         <div>
           <label htmlFor="position">Select Position</label>
-          <select name="position" id="position" value={formData.position} onChange={handleChange}>
+          <select className='m-2 p-2 rounded-lg' name="position" id="position" value={formData.position} onChange={handleChange}>
             <option value="">Select</option>
             <option value="developer">Developer</option>
             <option value="designer">Designer</option>
