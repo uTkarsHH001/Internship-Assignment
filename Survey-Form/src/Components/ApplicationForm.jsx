@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Input from './Input';
 import Summary from './Summary';
 import AdditionalQuestion from './AdditionQuestion';
@@ -68,18 +68,14 @@ export default function ApplicationForm() {
     }
   }
 
-  
-
   if (submitted) {
     return (
       <>
         <Summary formData={formData} />
-        {/* <AdditionalQuestion /> */}
+        <AdditionalQuestion />
       </>
     );
   }
-
-  useEffect
 
   return (
     <>
