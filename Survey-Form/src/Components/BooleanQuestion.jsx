@@ -41,7 +41,7 @@ const BooleanQuestions = ({ ques }) => {
 };
 
 BooleanQuestions.propTypes = {
-    ques: PropTypes.string.isRequired, // Ensure 'ques' prop is a required string
+    ques: PropTypes.string.isRequired,
 };
 
 export default BooleanQuestions;
